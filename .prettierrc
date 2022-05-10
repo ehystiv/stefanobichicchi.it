@@ -6,5 +6,6 @@
   "semi": true,
   "endOfLine": "lf",
   "vueIndentScriptAndStyle": true,
-  "singleQuote": false
+  "singleQuote": false,
+  "printWidth": 130
 }

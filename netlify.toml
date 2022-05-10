@@ -1,2 +1,7 @@
 [build]
   functions = 'functions'
+
+[[redirects]]
+  from = "/api/spotify"
+  to = "/.netlify/functions/spotify"
+  status = 200
