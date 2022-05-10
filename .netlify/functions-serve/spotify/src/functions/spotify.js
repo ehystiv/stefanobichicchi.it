@@ -2950,7 +2950,7 @@ var require_main = __commonJS({
 var import_node_fetch = __toModule(require_lib2());
 var import_dotenv = __toModule(require_main());
 (0, import_dotenv.config)();
-exports.handler = async (event, context) => {
+exports.handler = async (_event, _context) => {
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
   const auth = Buffer.from(`${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`).toString("base64");
   const tokenEndpoint = `https://accounts.spotify.com/api/token`;

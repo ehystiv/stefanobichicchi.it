@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import { config } from "dotenv";
 config();
 
-exports.handler = async (event, context) => {
+exports.handler = async (_event, _context) => {
   // Get the refresh token we stored as an environment variable
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
 
