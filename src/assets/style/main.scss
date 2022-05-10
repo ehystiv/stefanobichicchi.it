@@ -1,0 +1,14 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "@fontsource/aileron";
+
+// RESET
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Aileron', sans-serif;
+}
