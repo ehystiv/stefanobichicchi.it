@@ -7,6 +7,7 @@
       writedTitle: "",
       speed: 110,
       i: 0,
+      spotifySongs: [],
     }),
 
     methods: {
