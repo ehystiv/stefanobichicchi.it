@@ -27,7 +27,7 @@
     display: flex;
 
     .img {
-      padding: 2rem;
+      padding: 1.5rem;
       width: 60%;
       img {
         width: 100%;
@@ -37,14 +37,14 @@
 
     .info {
       width: 40%;
-      padding: 2.5rem 0.3rem;
+      padding: 2rem 0.3rem;
 
       .title {
         display: inline-block;
         margin-bottom: 0.4rem;
 
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: $teal-blue;
 
         text-decoration: none;

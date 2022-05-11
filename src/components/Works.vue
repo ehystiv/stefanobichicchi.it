@@ -202,6 +202,21 @@
           .study {
             width: 100%;
             margin-bottom: 2rem;
+
+            border-left: none;
+            border-right: none;
+
+            border-top-width: 0.6rem;
+            border-bottom-width: 0.6rem;
+
+            border-top-style: solid;
+            border-bottom-style: solid;
+
+            .title {
+              &::after {
+                opacity: 1;
+              }
+            }
           }
         }
       }
