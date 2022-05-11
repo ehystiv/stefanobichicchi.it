@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 
 export const useStore = defineStore("spotify", {
   state: () => ({
-    lastSongs: [],
+    lasts: [],
+    lastSong: null,
   }),
 });

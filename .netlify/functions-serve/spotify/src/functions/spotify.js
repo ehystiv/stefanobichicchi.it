@@ -2968,7 +2968,7 @@ exports.handler = async (_event, _context) => {
   }).catch((err) => {
     console.err(err);
   });
-  return (0, import_node_fetch.default)(`${playerEndpoint}?limit=5`, {
+  return (0, import_node_fetch.default)(`${playerEndpoint}?limit=12`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`
@@ -2976,12 +2976,7 @@ exports.handler = async (_event, _context) => {
   }).then((res) => res.json()).then(({ items }) => {
     const results = [];
     items.forEach((element) => {
-      const {
-        artists: artistsArray,
-        name,
-        external_urls: urls,
-        album
-      } = element.track;
+      const { artists: artistsArray, name, external_urls: urls, album } = element.track;
       const simplifiedArtists = artistsArray.map((artist) => ({
         name: artist.name,
         url: artist.href

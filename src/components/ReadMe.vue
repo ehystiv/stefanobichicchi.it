@@ -1,5 +1,5 @@
 <script setup>
-  import { BrandInstagramIcon } from "vue-tabler-icons";
+  import { BrandInstagramIcon, BrandGithubIcon } from "vue-tabler-icons";
 </script>
 
 <template>
@@ -10,11 +10,16 @@
         Sviluppatore WEB e amante della tecnologia, @Bologna. <br />
         Studente Boolean e autodidatta, amante del FullStack Web Developing, ho l'hobby di imparare nuovi linguaggi di
         programmazione. <br />
-        Dungeon Master, videogamer, avido lettore. <br />
+        Dungeon Master, videogamer, larper, avido lettore. <br />
       </p>
       <div class="socials">
         <p>Seguimi sui social</p>
-        <a href="https://www.instagram.com/ehystiv/" target="__blank"> <BrandInstagramIcon size="30" stroke-width="1" /> </a>
+        <a href="https://www.instagram.com/ehystiv/" target="__blank">
+          <BrandInstagramIcon class="social-icon" size="30" stroke-width="1" />
+        </a>
+        <a href="https://github.com/Stiv1100001" target="__blank">
+          <BrandGithubIcon class="social-icon" size="30" stroke-width="1" />
+        </a>
       </div>
     </div>
   </section>
@@ -26,6 +31,7 @@
   .container {
     max-width: 80%;
     margin: 0 auto;
+    padding: 7rem 0;
 
     display: flex;
     justify-content: flex-end;
@@ -33,6 +39,16 @@
     #readme {
       width: 66%;
       text-align: right;
+
+      .description,
+      .socials > p {
+        font-size: 1.3rem;
+        font-weight: 100;
+      }
+
+      .hi {
+        font-size: 2rem;
+      }
 
       .hi,
       .description,
@@ -47,14 +63,25 @@
 
       .socials a {
         color: black;
+
+        .social-icon {
+          transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover {
+          .social-icon {
+            transform: rotate(-45deg);
+          }
+        }
+
         &:visited {
-          color: green;
+          color: $laurel-green;
         }
       }
     }
   }
 
-  @include mobile {
+  @include tablet {
     .container {
       max-width: 95%;
 

@@ -7,9 +7,7 @@ exports.handler = async (_event, _context) => {
   const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
 
   // Do the base64 encoding we did earlier but with Node tools
-  const auth = Buffer.from(
-    `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
-  ).toString("base64");
+  const auth = Buffer.from(`${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`).toString("base64");
 
   // Store the Spotify API endpoint for readability
   const tokenEndpoint = `https://accounts.spotify.com/api/token`;
@@ -37,7 +35,7 @@ exports.handler = async (_event, _context) => {
       console.err(err);
     });
 
-  return fetch(`${playerEndpoint}?limit=5`, {
+  return fetch(`${playerEndpoint}?limit=12`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -48,12 +46,7 @@ exports.handler = async (_event, _context) => {
       const results = [];
       // Let's do a little more destructuring assignment to take only what we need from the response
       items.forEach((element) => {
-        const {
-          artists: artistsArray,
-          name,
-          external_urls: urls,
-          album,
-        } = element.track;
+        const { artists: artistsArray, name, external_urls: urls, album } = element.track;
 
         // We want to keep the array of artists in case there's a track feature, etc.
         const simplifiedArtists = artistsArray.map((artist) => ({

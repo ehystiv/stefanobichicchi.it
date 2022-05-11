@@ -1,42 +1,30 @@
-<script>
+<script setup>
   import { BrandSpotifyIcon } from "vue-tabler-icons";
   import { useStore } from "../stores/spotify";
+  import { ref } from "vue";
+  import { storeToRefs } from "pinia";
 
-  export default {
-    name: "NavBar",
+  const title = "Stefano Bichicchi - Sviluppatore Web";
+  const writedTitle = ref("");
+  const speed = 110;
+  const i = ref(0);
 
-    components: {
-      BrandSpotifyIcon,
-    },
+  const showSpotify = ref(false);
+  const store = useStore();
 
-    data: () => ({
-      title: "Stefano Bichicchi - Sviluppatore Web",
-      writedTitle: "",
-      speed: 110,
-      i: 0,
-      lastSpotifySong: null,
-      showSpotify: false,
-      store: null,
-    }),
+  const { lastSong } = storeToRefs(store);
 
-    methods: {
-      writeTitle() {
-        if (this.writedTitle.length < this.title.length) {
-          this.writedTitle += this.title[this.i];
-          this.i++;
-          setTimeout(this.writeTitle, this.speed);
-        } else {
-          this.showSpotify = true;
-        }
-      },
-    },
+  function writeTitle() {
+    if (writedTitle.value.length < title.length) {
+      writedTitle.value += title[i.value];
+      i.value++;
+      setTimeout(writeTitle, speed);
+    } else {
+      showSpotify.value = true;
+    }
+  }
 
-    created() {
-      this.writeTitle();
-      this.store = useStore();
-      this.lastSpotifySong = this.store.lastSongs[0];
-    },
-  };
+  writeTitle();
 </script>
 
 <template>
@@ -46,10 +34,12 @@
         <h1 class="name">{{ writedTitle }}<span class="underscore">_</span></h1>
       </div>
       <div>
-        <div v-if="showSpotify" class="current-song">
-          Ultima riproduzione: <a :href="lastSpotifySong?.trackUrl">{{ lastSpotifySong?.name || "Nessuna canzone" }}</a>
-          <span><BrandSpotifyIcon size="25" stroke-width="1" /></span>
-        </div>
+        <Transition appear name="slide-fade">
+          <div v-if="showSpotify" class="current-song">
+            Ultima riproduzione: <a :href="lastSong?.trackUrl">{{ lastSong?.name || "Nessuna canzone" }}</a>
+            <span><BrandSpotifyIcon size="25" stroke-width="1" /></span>
+          </div>
+        </Transition>
       </div>
       <div>
         <button class="btn">ita</button>
@@ -63,6 +53,11 @@
   @import "../assets/style/partials/_mixins.scss";
 
   #main-navbar {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+
     .nav-container {
       padding: 0.8rem 2rem;
       min-height: 8vh;
@@ -82,6 +77,7 @@
 
         .underscore {
           animation: fade 1.5s linear infinite;
+          color: $laurel-green;
         }
       }
 
@@ -149,5 +145,19 @@
     100% {
       opacity: 1;
     }
+  }
+
+  .slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+  }
+
+  .slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
   }
 </style>
