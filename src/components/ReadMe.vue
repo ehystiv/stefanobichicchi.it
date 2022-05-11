@@ -27,10 +27,10 @@
   @import "+/style/partials/_variables.scss";
   @import "+/style/partials/_mixins.scss";
   .wrapper {
-    padding: 7rem 0;
-
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    min-height: 60vh;
 
     #readme {
       width: 66%;
@@ -71,7 +71,7 @@
         }
 
         &:visited {
-          color: $laurel-green;
+          color: $turquoise-green;
         }
       }
     }

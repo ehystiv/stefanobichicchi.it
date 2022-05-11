@@ -23,7 +23,7 @@
   @import "+/style/partials/mixins";
 
   #last-songs {
-    background-color: $bone;
+    background-color: $powder-blue;
 
     padding: 1.5rem 0;
 
@@ -41,10 +41,10 @@
     .songs {
       display: flex;
       flex-wrap: wrap;
-      row-gap: 3rem;
+      row-gap: 1rem;
 
       .song {
-        width: calc(100% / 4 - 2px);
+        width: calc(100% / 4);
       }
     }
   }
@@ -54,7 +54,18 @@
       padding: 1.5rem 5%;
       .songs {
         .song {
-          width: calc(100% / 3 - 2px);
+          width: calc(100% / 3);
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    #last-songs {
+      padding: 1.5rem 5%;
+      .songs {
+        .song {
+          width: calc(100% / 2);
         }
       }
     }

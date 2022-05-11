@@ -92,6 +92,7 @@
 
   #works {
     margin-bottom: 3rem;
+    min-height: 40vh;
 
     .wrapper {
       .icon {
@@ -133,7 +134,7 @@
               width: 120%;
               height: 0.3rem;
               position: absolute;
-              background-color: $bone;
+              background-color: $xanadu;
               z-index: -1;
               opacity: 0.7;
               bottom: 5px;
@@ -171,17 +172,17 @@
 
             p {
               font-weight: 400;
-              color: $laurel-green;
+              color: $heliotrope-gray;
             }
           }
         }
 
         .client {
-          border-color: $teal-blue;
+          border-color: $eton-blue;
         }
 
         .study {
-          border-color: $ming;
+          border-color: $heliotrope-gray;
         }
       }
     }

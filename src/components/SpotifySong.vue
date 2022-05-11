@@ -9,7 +9,7 @@
 
 <template>
   <div class="wrapper">
-    <div class="img">
+    <div class="img-container">
       <img :src="props.song?.artworkUrl" alt="" />
     </div>
     <div class="info">
@@ -25,10 +25,11 @@
 
   .wrapper {
     display: flex;
+    padding: 5px;
 
-    .img {
-      padding: 1.5rem;
+    .img-container {
       width: 60%;
+
       img {
         width: 100%;
         border-radius: 1rem;
@@ -37,17 +38,21 @@
 
     .info {
       width: 40%;
-      padding: 2rem 0.3rem;
+      padding: 10px 5px;
+
+      overflow: hidden;
 
       .title {
         display: inline-block;
-        margin-bottom: 0.4rem;
-
-        font-weight: 400;
-        font-size: 1rem;
-        color: $teal-blue;
-
+        color: $xanadu;
         text-decoration: none;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+
+        font-size: 1.2rem;
 
         &:hover {
           text-decoration: underline;
@@ -57,28 +62,21 @@
       .author {
         font-weight: 400;
         font-size: 1rem;
+        text-overflow: ellipsis;
       }
     }
   }
 
   @include tablet {
     .wrapper {
-      .img {
-        padding: 0.5rem;
+      .img-container {
         width: 50%;
       }
 
       .info {
-        padding: 0.5rem;
         width: 50%;
 
-        .title {
-          font-size: 1.2rem;
-        }
-
-        .author {
-          font-size: 0.9rem;
-        }
+        padding: 2px 5px;
       }
     }
   }

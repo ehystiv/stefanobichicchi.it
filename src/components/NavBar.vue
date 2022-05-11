@@ -60,7 +60,8 @@
   @import "+/style/partials/_mixins.scss";
 
   #main-navbar {
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     top: 0;
     background-color: white;
     z-index: 5;
@@ -72,7 +73,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 3rem;
 
       .title {
         width: 25%;
@@ -84,7 +84,7 @@
 
         .underscore {
           animation: fade 1.5s linear infinite;
-          color: $laurel-green;
+          color: $turquoise-green;
         }
       }
 
