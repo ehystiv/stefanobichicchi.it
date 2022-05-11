@@ -20,8 +20,8 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "../assets/style/partials/variables";
-  @import "../assets/style/partials/_mixins.scss";
+  @import "+/style/partials/variables";
+  @import "+/style/partials/_mixins.scss";
 
   .wrapper {
     display: flex;

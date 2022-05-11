@@ -87,8 +87,8 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "../assets/style/partials/variables";
-  @import "../assets/style/partials/mixins";
+  @import "+/style/partials/variables";
+  @import "+/style/partials/mixins";
 
   #works {
     margin-bottom: 3rem;

@@ -26,8 +26,8 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "../assets/style/partials/_variables.scss";
-  @import "../assets/style/partials/_mixins.scss";
+  @import "+/style/partials/_variables.scss";
+  @import "+/style/partials/_mixins.scss";
   .container {
     max-width: 80%;
     margin: 0 auto;

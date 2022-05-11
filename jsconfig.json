@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "@": ["src/components"],
+      "~": ["node_modules"],
+      "+": ["src/assets"],
+      "-": ["src/stores"]
+    }
   }
 }

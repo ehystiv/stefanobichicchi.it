@@ -36,7 +36,7 @@
       <div>
         <Transition appear name="slide-fade">
           <div v-if="showSpotify" class="current-song">
-            Ultima riproduzione: <a :href="lastSong?.trackUrl">{{ lastSong?.name || "Nessuna canzone" }}</a>
+            {{ $t("messages.playing") }} <a :href="lastSong?.trackUrl">{{ lastSong?.name || "Nessuna canzone" }}</a>
             <span><BrandSpotifyIcon size="25" stroke-width="1" /></span>
           </div>
         </Transition>
@@ -49,8 +49,8 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "../assets/style/partials/_variables.scss";
-  @import "../assets/style/partials/_mixins.scss";
+  @import "+/style/partials/_variables.scss";
+  @import "+/style/partials/_mixins.scss";
 
   #main-navbar {
     position: sticky;

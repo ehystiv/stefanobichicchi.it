@@ -3,6 +3,12 @@ import { createI18n } from "vue-i18n";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 
-const i18n = createI18n({});
+import { messages } from "./langs";
+
+const i18n = createI18n({
+  locale: "ita",
+  fallbackLocale: "eng",
+  messages,
+});
 
 createApp(App).use(i18n).use(createPinia()).mount("#app");
