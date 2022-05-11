@@ -30,7 +30,7 @@
 
   const learns = [
     {
-      name: "Tutti gli esercizi Boolean",
+      name: "Boolean",
       year: 2022,
       technologies: "HTML, CSS, Javascript, Vue 2, SCSS, PHP, Laravel",
       url: "https://github.com/stars/Stiv1100001/lists/boolean",
@@ -64,18 +64,18 @@
 
 <template>
   <section id="works">
-    <div class="container">
-      <h1 class="work-title"><ArrowDownLeftIcon class="icon" stroke-width="1" />Dove sono ora e dove sono partito</h1>
+    <div class="box-container wrapper">
+      <h1 class="work-title"><ArrowDownLeftIcon class="icon" stroke-width="1" />{{ $t("message.jobs.title") }}</h1>
       <div class="row">
         <div class="client">
-          <h1 class="title">Lavori</h1>
+          <h1 class="title">{{ $t("message.jobs.job") }}</h1>
           <div class="work-item" v-for="job in jobs" :key="job.name">
             <a :href="job.url">{{ job.name }}</a>
             <p>{{ job.technologies }} - {{ job.year }}</p>
           </div>
         </div>
         <div class="study">
-          <h1 class="title">Didattica</h1>
+          <h1 class="title">{{ $t("message.jobs.learn") }}</h1>
           <div class="work-item" v-for="learn in learns" :key="learn.name">
             <a :href="learn.url"> {{ learn.name }} </a>
             <p>{{ learn.technologies }} - {{ learn.year }}</p>
@@ -93,10 +93,7 @@
   #works {
     margin-bottom: 3rem;
 
-    .container {
-      width: 80%;
-      margin: 0 auto;
-
+    .wrapper {
       .icon {
         vertical-align: bottom;
       }
@@ -192,9 +189,7 @@
 
   @include mobile {
     #works {
-      .container {
-        width: 95%;
-
+      .wrapper {
         .row {
           flex-direction: column;
 

@@ -1,10 +1,12 @@
 <script setup>
   import { BrandSpotifyIcon } from "vue-tabler-icons";
   import { useStore } from "../stores/spotify";
-  import { ref } from "vue";
+  import { computed, ref } from "vue";
   import { storeToRefs } from "pinia";
+  import { useI18n } from "vue-i18n";
 
-  const title = "Stefano Bichicchi - Sviluppatore Web";
+  let { t, locale } = useI18n({ useScope: "global" });
+  const title = t("message.title");
   const writedTitle = ref("");
   const speed = 110;
   const i = ref(0);
@@ -13,6 +15,11 @@
   const store = useStore();
 
   const { lastSong } = storeToRefs(store);
+
+  const switchedLocale = computed(() => {
+    if (locale.value == "it") return "eng";
+    else return "it";
+  });
 
   function writeTitle() {
     if (writedTitle.value.length < title.length) {
@@ -36,13 +43,13 @@
       <div>
         <Transition appear name="slide-fade">
           <div v-if="showSpotify" class="current-song">
-            {{ $t("messages.playing") }} <a :href="lastSong?.trackUrl">{{ lastSong?.name || "Nessuna canzone" }}</a>
+            {{ $t("message.current_song") }} <a :href="lastSong?.trackUrl">{{ lastSong?.name || "Nessuna canzone" }}</a>
             <span><BrandSpotifyIcon size="25" stroke-width="1" /></span>
           </div>
         </Transition>
       </div>
       <div>
-        <button class="btn">ita</button>
+        <button class="btn" @click="$i18n.locale = switchedLocale">{{ switchedLocale }}</button>
       </div>
     </div>
   </nav>
@@ -90,7 +97,7 @@
         a {
           white-space: nowrap;
           display: inline-block;
-          margin-inline: 10px;
+          margin-inline: 5px;
           color: black;
           text-decoration: none;
 
@@ -101,6 +108,8 @@
       }
 
       .btn {
+        // display: inline-block;
+        width: 5vw;
         border: none;
 
         padding: 0.2rem 0.5rem;

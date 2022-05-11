@@ -1,24 +1,22 @@
 <script setup>
-  import { BrandInstagramIcon, BrandGithubIcon } from "vue-tabler-icons";
+  import { BrandInstagramIcon, BrandGithubIcon, BrandLinkedinIcon } from "vue-tabler-icons";
 </script>
 
 <template>
-  <section class="container">
+  <section class="box-container wrapper">
     <div id="readme">
-      <h1 class="hi">Ciao, sono Stefano!👋</h1>
-      <p class="description">
-        Sviluppatore WEB e amante della tecnologia, @Bologna. <br />
-        Studente Boolean e autodidatta, amante del FullStack Web Developing, ho l'hobby di imparare nuovi linguaggi di
-        programmazione. <br />
-        Dungeon Master, videogamer, larper, avido lettore. <br />
-      </p>
+      <h1 class="hi">{{ $t("message.bio.title") }}</h1>
+      <p class="description" v-html="$t('message.bio.bio')"></p>
       <div class="socials">
-        <p>Seguimi sui social</p>
+        <p>{{ $t("message.bio.social") }}</p>
         <a href="https://www.instagram.com/ehystiv/" target="__blank">
           <BrandInstagramIcon class="social-icon" size="30" stroke-width="1" />
         </a>
         <a href="https://github.com/Stiv1100001" target="__blank">
           <BrandGithubIcon class="social-icon" size="30" stroke-width="1" />
+        </a>
+        <a href="https://www.linkedin.com/in/stefano-bichicchi-68ba91169/" target="__blank">
+          <BrandLinkedinIcon class="social-icon" size="30" stroke-width="1" />
         </a>
       </div>
     </div>
@@ -28,9 +26,7 @@
 <style lang="scss" scoped>
   @import "+/style/partials/_variables.scss";
   @import "+/style/partials/_mixins.scss";
-  .container {
-    max-width: 80%;
-    margin: 0 auto;
+  .wrapper {
     padding: 7rem 0;
 
     display: flex;
@@ -82,9 +78,7 @@
   }
 
   @include tablet {
-    .container {
-      max-width: 95%;
-
+    .wrapper {
       #readme {
         width: 100%;
       }

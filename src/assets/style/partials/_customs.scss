@@ -1,0 +1,18 @@
+@import "./mixins";
+
+.box-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@include tablet {
+    .box-container {
+        width: 90%;
+    }
+}
+
+@include mobile {
+    .box-container {
+        width: 95%;
+    }
+}

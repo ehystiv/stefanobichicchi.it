@@ -11,8 +11,10 @@
 
 <template>
   <section id="last-songs">
-    <h1 class="title"><PlayerSkipForwardIcon class="icon" stroke-width="1" />La mia musica</h1>
-    <div class="songs"><SpotifySong v-for="song in lasts" :key="song.name" :song="song" class="song" /></div>
+    <div class="box-container">
+      <h1 class="title"><PlayerSkipForwardIcon class="icon" stroke-width="1" />{{ $t("message.music.title") }}</h1>
+      <div class="songs"><SpotifySong v-for="song in lasts" :key="song.name" :song="song" class="song" /></div>
+    </div>
   </section>
 </template>
 
@@ -23,7 +25,7 @@
   #last-songs {
     background-color: $bone;
 
-    padding: 1.5rem 10%;
+    padding: 1.5rem 0;
 
     .title {
       font-weight: 400;
