@@ -15,6 +15,9 @@ export const messages = {
         job: "Lavori🧑‍💼",
         learn: "Didattica📖",
       },
+      lang: {
+        title: "Linguaggi&Tecnologie",
+      },
       music: {
         title: "La mia musica🎧",
       },
@@ -35,6 +38,9 @@ export const messages = {
         title: "Where am I now and where have I started",
         job: "Clients🧑‍💼",
         learn: "Learn📖",
+      },
+      lang: {
+        title: "Languages&Technologies",
       },
       music: {
         title: "My music🎧",

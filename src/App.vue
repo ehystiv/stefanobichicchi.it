@@ -29,8 +29,8 @@
   <NavBar />
   <ReadMe />
   <Works />
-  <LastSongs />
   <LanguageAndTechnologies />
+  <LastSongs />
 </template>
 
 <style lang="scss">
