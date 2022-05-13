@@ -1,5 +1,5 @@
 <script setup>
-  import { ArrowDownLeftIcon } from "vue-tabler-icons";
+  import { ArrowDownRightIcon } from "vue-tabler-icons";
 
   const jobs = [
     {
@@ -65,7 +65,7 @@
 <template>
   <section id="works">
     <div class="box-container wrapper">
-      <h1 class="work-title"><ArrowDownLeftIcon class="icon" stroke-width="1" />{{ $t("message.jobs.title") }}</h1>
+      <h1 class="work-title">{{ $t("message.jobs.title") }}<ArrowDownRightIcon class="icon" stroke-width="1" /></h1>
       <div class="row">
         <div class="client">
           <h1 class="title">{{ $t("message.jobs.job") }}</h1>
@@ -102,19 +102,18 @@
       .work-title {
         margin-bottom: 2.5rem;
 
-        text-align: right;
         font-weight: 600;
       }
 
       .row {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-content: stretch;
         gap: 2rem;
 
         .client,
         .study {
-          width: 50%;
           position: relative;
           border-left-width: 0.6rem;
           border-right-width: 0.6rem;
@@ -179,10 +178,13 @@
 
         .client {
           border-color: $eton-blue;
+          width: 60%;
         }
 
         .study {
+          width: 60%;
           border-color: $heliotrope-gray;
+          margin-left: auto;
         }
       }
     }

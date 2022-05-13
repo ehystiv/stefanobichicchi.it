@@ -33,8 +33,8 @@
   .wrapper {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    min-height: 60vh;
+    align-items: flex-end;
+    min-height: 40vh;
 
     #readme {
       width: 66%;
