@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
+    "target": "ES2015",
+    "module": "ESNext",
     "jsx": "preserve",
     "baseUrl": "./",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": true,
     "paths": {
       "@": ["src/components"],
       "~": ["node_modules"],
       "+": ["src/assets"],
       "-": ["src/stores"]
     }
-  }
+  },
+  "include": ["src/**/*.vue", "src/**/*.js"]
 }
