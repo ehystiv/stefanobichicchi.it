@@ -35,7 +35,7 @@ exports.handler = async (_event, _context) => {
       console.err(err);
     });
 
-  return fetch(`${playerEndpoint}?limit=12`, {
+  return fetch(`${playerEndpoint}?limit=4`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`,

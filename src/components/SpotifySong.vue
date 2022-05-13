@@ -25,22 +25,21 @@
 
   .wrapper {
     display: flex;
-    padding: 5px;
 
     .img-container {
-      width: 60%;
-
+      height: 100%;
       img {
-        width: 100%;
+        height: 100%;
         border-radius: 1rem;
       }
     }
 
     .info {
-      width: 40%;
-      padding: 10px 5px;
-
-      overflow: hidden;
+      margin-left: 3rem;
+      padding: 0.3rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       .title {
         display: inline-block;
@@ -69,14 +68,8 @@
 
   @include tablet {
     .wrapper {
-      .img-container {
-        width: 50%;
-      }
-
       .info {
-        width: 50%;
-
-        padding: 2px 5px;
+        margin-left: 1rem;
       }
     }
   }

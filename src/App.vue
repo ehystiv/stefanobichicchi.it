@@ -4,6 +4,7 @@
   import ReadMe from "./components/ReadMe.vue";
   import Works from "./components/Works.vue";
   import LastSongs from "./components/LastSongs.vue";
+  import LanguageAndTechnologies from "./components/LanguageAndTechnologies.vue";
 
   const store = useStore();
 
@@ -29,6 +30,7 @@
   <ReadMe />
   <Works />
   <LastSongs />
+  <LanguageAndTechnologies />
 </template>
 
 <style lang="scss">

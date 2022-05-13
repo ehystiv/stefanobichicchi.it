@@ -101,6 +101,7 @@
 
       .work-title {
         margin-bottom: 2.5rem;
+        font-size: 1.8rem;
 
         font-weight: 600;
       }

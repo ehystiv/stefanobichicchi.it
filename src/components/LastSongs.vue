@@ -29,7 +29,6 @@
 
     .title {
       font-weight: 400;
-      text-align: right;
       margin-bottom: 2rem;
     }
 
@@ -39,12 +38,13 @@
     }
 
     .songs {
+      width: 50%;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       row-gap: 1rem;
 
       .song {
-        width: calc(100% / 4);
+        height: 10vh;
       }
     }
   }
@@ -53,9 +53,7 @@
     #last-songs {
       padding: 1.5rem 5%;
       .songs {
-        .song {
-          width: calc(100% / 3);
-        }
+        width: 75%;
       }
     }
   }
@@ -64,9 +62,7 @@
     #last-songs {
       padding: 1.5rem 5%;
       .songs {
-        .song {
-          width: calc(100% / 2);
-        }
+        width: 100%;
       }
     }
   }

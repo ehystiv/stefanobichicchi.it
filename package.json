@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/aileron": "^4.5.3",
+    "devicon": "^2.15.1",
     "dotenv": "^16.0.0",
     "node-fetch": "2",
     "pinia": "^2.0.14",

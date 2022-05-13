@@ -2968,7 +2968,7 @@ exports.handler = async (_event, _context) => {
   }).catch((err) => {
     console.err(err);
   });
-  return (0, import_node_fetch.default)(`${playerEndpoint}?limit=12`, {
+  return (0, import_node_fetch.default)(`${playerEndpoint}?limit=4`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`

@@ -109,7 +109,7 @@
 
       .btn {
         // display: inline-block;
-        width: 5vw;
+        // width: 5vw;
         border: none;
 
         padding: 0.2rem 0.5rem;
@@ -131,6 +131,7 @@
   @include mobile {
     #main-navbar {
       .nav-container {
+        padding: 0 0.5rem;
         .title {
           width: unset;
         }

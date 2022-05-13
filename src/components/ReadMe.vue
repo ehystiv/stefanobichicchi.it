@@ -1,5 +1,5 @@
 <script setup>
-  import { BrandInstagramIcon, BrandGithubIcon, BrandLinkedinIcon } from "vue-tabler-icons";
+  import { BrandInstagramIcon, BrandGithubIcon, BrandLinkedinIcon, CoffeeIcon } from "vue-tabler-icons";
 </script>
 
 <template>
@@ -14,13 +14,16 @@
       <div class="socials">
         <p>{{ $t("message.bio.social") }}</p>
         <a href="https://www.instagram.com/ehystiv/" target="__blank">
-          <BrandInstagramIcon class="social-icon" size="30" stroke-width="1" />
+          <BrandInstagramIcon class="social-icon" size="35" stroke-width="1" />
         </a>
         <a href="https://github.com/Stiv1100001" target="__blank">
-          <BrandGithubIcon class="social-icon" size="30" stroke-width="1" />
+          <BrandGithubIcon class="social-icon" size="35" stroke-width="1" />
         </a>
         <a href="https://www.linkedin.com/in/stefano-bichicchi-68ba91169/" target="__blank">
-          <BrandLinkedinIcon class="social-icon" size="30" stroke-width="1" />
+          <BrandLinkedinIcon class="social-icon" size="35" stroke-width="1" />
+        </a>
+        <a href="https://ko-fi.com/stivvv" target="__blank">
+          <CoffeeIcon class="social-icon" size="35" stroke-width="1" />
         </a>
       </div>
     </div>
@@ -47,7 +50,7 @@
       }
 
       .hi {
-        font-size: 2rem;
+        font-size: 3rem;
       }
 
       .hi,
@@ -58,7 +61,7 @@
 
       .description,
       .socials {
-        margin-right: 3rem;
+        margin-right: 4rem;
       }
 
       .socials a {
@@ -85,6 +88,23 @@
     .wrapper {
       #readme {
         width: 100%;
+      }
+    }
+  }
+
+  @include mobile {
+    .wrapper {
+      min-height: 50vh;
+      margin-top: 10vh;
+      #readme {
+        .hi {
+          font-size: 1.8rem;
+        }
+
+        .description,
+        .socials {
+          margin-right: 1.8rem;
+        }
       }
     }
   }
