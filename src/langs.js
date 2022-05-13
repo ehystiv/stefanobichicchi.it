@@ -12,11 +12,11 @@ export const messages = {
       },
       jobs: {
         title: "Dove sono ora e dove sono partito",
-        job: "Lavori",
-        learn: "Didattica",
+        job: "Lavori🧑‍💼",
+        learn: "Didattica📖",
       },
       music: {
-        title: "La mia musica",
+        title: "La mia musica🎧",
       },
     },
   },
@@ -33,11 +33,11 @@ export const messages = {
       },
       jobs: {
         title: "Where am I now and where have I started",
-        job: "Clients",
-        learn: "Learn",
+        job: "Clients🧑‍💼",
+        learn: "Learn📖",
       },
       music: {
-        title: "My music",
+        title: "My music🎧",
       },
     },
   },
