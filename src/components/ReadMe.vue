@@ -5,9 +5,9 @@
 <template>
   <section class="box-container wrapper">
     <div id="readme">
-      <p>test</p>
-      <!-- <h1 class="hi">{{ $t("message.bio.title") }}</h1>
-      <p class="description">
+      <!-- <p>test</p> -->
+      <h1 class="hi">{{ $t("message.bio.title") }}</h1>
+      <!-- <p class="description">
         {{ $t("message.bio.bio1") }} <br />
         {{ $t("message.bio.bio2") }} <br />
         {{ $t("message.bio.bio3") }}
