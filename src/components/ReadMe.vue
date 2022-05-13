@@ -7,7 +7,7 @@
     <div id="readme">
       <h1 class="hi">{{ $t("message.bio.title") }}</h1>
       <p class="description">
-        {{ $t("message.bio.bioFirst") }} <br />
+        {{ $t("message.bio.bioFirst") }}
         <!-- {{ $t("message.bio.bio2") }} <br />
         {{ $t("message.bio.bio3") }} -->
       </p>
