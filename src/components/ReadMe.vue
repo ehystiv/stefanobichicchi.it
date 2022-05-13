@@ -5,13 +5,12 @@
 <template>
   <section class="box-container wrapper">
     <div id="readme">
-      <!-- <p>test</p> -->
       <h1 class="hi">{{ $t("message.bio.title") }}</h1>
-      <!-- <p class="description">
+      <p class="description">
         {{ $t("message.bio.bio1") }} <br />
-        {{ $t("message.bio.bio2") }} <br />
-        {{ $t("message.bio.bio3") }}
-      </p> -->
+        <!-- {{ $t("message.bio.bio2") }} <br />
+        {{ $t("message.bio.bio3") }} -->
+      </p>
       <div class="socials">
         <p>{{ $t("message.bio.social") }}</p>
         <a href="https://www.instagram.com/ehystiv/" target="__blank">
