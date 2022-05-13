@@ -5,7 +5,7 @@ export const messages = {
       current_song: "In ripoduzione:",
       bio: {
         title: "Ciao, sono Stefano!👋",
-        bio1: "Sviluppatore WEB e amante della tecnologia, @Bologna.",
+        bioFirst: "Sviluppatore WEB e amante della tecnologia, @Bologna.",
         bio2: "Studente Boolean e autodidatta, amante del FullStack Web Developing, ho l'hobby di imparare nuovi linguaggi di programmazione ogni giorno.",
         bio3: "Dungeon Master, videogamer, larper, avido lettore.",
         social: "Seguimi sui social",
@@ -26,7 +26,7 @@ export const messages = {
       current_song: "Currently playing:",
       bio: {
         title: "Hi, I'm Stefano!👋",
-        bio1: "WEB Developer and tech entusiast, @Bologna",
+        bioFirst: "WEB Developer and tech entusiast, @Bologna",
         bio2: "Boolean student and self-taught, my hobby is to learn new programming language every day.",
         bio3: "Dungeon Master, videogamer, larper, book reader.",
         social: "Follow me on socials",
