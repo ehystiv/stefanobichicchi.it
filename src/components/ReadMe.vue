@@ -78,7 +78,7 @@
         }
 
         &:visited {
-          color: $turquoise-green;
+          color: $bg;
         }
       }
     }

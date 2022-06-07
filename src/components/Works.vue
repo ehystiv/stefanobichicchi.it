@@ -17,7 +17,7 @@
     {
       name: "Ristorante Claro de Luna",
       year: 2021,
-      technologies: "Wordpress",
+      technologies: "Vue 3",
       url: "https://clarodelunaristorante.it/",
     },
     {
@@ -134,7 +134,7 @@
               width: 120%;
               height: 0.3rem;
               position: absolute;
-              background-color: $xanadu;
+              background-color: $bg;
               z-index: -1;
               opacity: 0.7;
               bottom: 5px;
@@ -172,19 +172,19 @@
 
             p {
               font-weight: 400;
-              color: $heliotrope-gray;
+              color: $bg-accent;
             }
           }
         }
 
         .client {
-          border-color: $eton-blue;
+          border-color: $primary;
           width: 60%;
         }
 
         .study {
           width: 60%;
-          border-color: $heliotrope-gray;
+          border-color: $secondary;
           margin-left: auto;
         }
       }

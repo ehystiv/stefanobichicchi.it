@@ -1,9 +1,12 @@
 /* COLOR HSL */
-$xanadu: #627264ff;
-$eton-blue: #a1cda8ff;
+$primary: hsla(72, 68%, 64%, 1);
+$secondary: hsla(10, 85%, 77%, 1);
+$accent: hsla(245, 44%, 90%, 1);
+$bg: hsla(178, 93%, 21%, 1);
+$bg-accent: hsla(180, 66%, 38%, 1);
+
 $turquoise-green: #b5dfcaff;
 $powder-blue: #c5e7e2ff;
-$heliotrope-gray: #ad9baaff;
 
 // Breakpoints
 $breakpoints: (

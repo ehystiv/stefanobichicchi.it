@@ -84,7 +84,7 @@
 
         .underscore {
           animation: fade 1.5s linear infinite;
-          color: $turquoise-green;
+          color: $bg;
         }
       }
 

@@ -43,7 +43,7 @@
 
       .title {
         display: inline-block;
-        color: $xanadu;
+        color: $bg;
         text-decoration: none;
         margin-bottom: 5px;
         margin-top: 5px;

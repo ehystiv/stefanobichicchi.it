@@ -18,6 +18,7 @@
     "devicon-git-plain",
     "devicon-github-original",
     "devicon-express-original-wordmark",
+    "devicon-windows8-original",
     "devicon-linux-plain",
     "devicon-mongodb-plain-wordmark",
     "devicon-mysql-plain-wordmark",
