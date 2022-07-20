@@ -24,6 +24,12 @@
     "devicon-mysql-plain-wordmark",
     "devicon-postgresql-plain-wordmark",
     "devicon-nginx-original-wordmark",
+    "devicon-godot-plain colored",
+    "devicon-npm-original-wordmark colored",
+    "devicon-yarn-plain colored",
+    "devicon-raspberrypi-line colored",
+    "devicon-ubuntu-plain colored",
+    "devicon-vscode-plain colored",
   ];
 </script>
 
