@@ -79,6 +79,12 @@
           margin-bottom: 1rem;
           background-color: white;
           border-radius: 50%;
+
+          transition: all 0.2s linear;
+
+          &:hover {
+            transform: scale(1.2) rotate(360deg);
+          }
         }
       }
     }
