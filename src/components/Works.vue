@@ -11,7 +11,7 @@
     {
       name: "Book Cosmoderma",
       year: 2021,
-      technologies: "Nuxt 2 + Nest.js",
+      technologies: "Laravel + Inertia.js + Vue 3",
       url: "https://book.cosmoderma.it",
     },
     {
